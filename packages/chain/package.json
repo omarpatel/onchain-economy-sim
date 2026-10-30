@@ -1,0 +1,23 @@
+{
+  "name": "@econ-sim/chain",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Economy Sim Anchor programs: dividends (merkle settlement), staking (veECON), equity (on-chain cap tables), memecoin_factory (bonding curves). Built and tested in WSL (Ubuntu-24.04) where anchor/solana live; tests run on LiteSVM with no validator.",
+  "scripts": {
+    "keys": "wsl -d Ubuntu-24.04 -- bash scripts/wsl.sh keys",
+    "build": "wsl -d Ubuntu-24.04 -- bash scripts/wsl.sh build",
+    "test": "wsl -d Ubuntu-24.04 -- bash scripts/wsl.sh test",
+    "deploy:devnet": "wsl -d Ubuntu-24.04 -- bash scripts/wsl.sh deploy-devnet",
+    "deploy:localnet": "wsl -d Ubuntu-24.04 -- bash scripts/wsl.sh deploy-localnet"
+  },
+  "devDependencies": {
+    "@coral-xyz/anchor": "^0.31.1",
+    "@noble/hashes": "^1.4.0",
+    "@solana/kit": "^8.3.0",
+    "bn.js": "^5.2.1",
+    "@solana/spl-token": "^0.4.8",
+    "@solana/web3.js": "^1.95.3",
+    "litesvm": "^1.4.1"
+  }
+}

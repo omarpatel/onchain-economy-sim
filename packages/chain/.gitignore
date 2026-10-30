@@ -1,0 +1,9 @@
+# The root .gitignore drops every `target/`; re-include the generated IDLs and TS
+# types while still ignoring build output and program keypairs (generate them
+# locally with `npm run keys`).
+!target/
+target/*
+!target/idl/
+!target/types/
+.anchor/
+test-ledger/

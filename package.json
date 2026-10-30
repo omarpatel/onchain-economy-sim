@@ -1,0 +1,30 @@
+{
+  "name": "onchain-economy-sim",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Economy Sim - browser-based multiplayer economic strategy sim with Solana on-chain settlement",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "sim": "node packages/sim/sim.ts",
+    "sim:long": "node packages/sim/sim.ts --ticks 720 --players 12 --npcs 40",
+    "server": "node packages/server/src/index.ts",
+    "worker": "node packages/integration/src/index.ts",
+    "web": "npm --workspace=@econ-sim/web run dev",
+    "build": "npm --workspace=@econ-sim/web run build",
+    "typecheck": "tsc --noEmit -p packages/sim && tsc --noEmit -p packages/server && tsc --noEmit -p packages/web && tsc --noEmit -p packages/integration/tsconfig.json",
+    "test": "node packages/sim/test.ts && node --test packages/server/test.ts packages/integration/test.ts packages/web/test/siws.test.ts",
+    "test:sim": "node packages/sim/test.ts",
+    "test:chain": "npm --workspace=@econ-sim/chain test"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "overrides": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "three": "0.170.0"
+  }
+}

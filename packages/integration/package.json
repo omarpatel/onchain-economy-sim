@@ -1,0 +1,22 @@
+{
+  "name": "@econ-sim/integration",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Bridges the off-chain Economy Sim economy to Solana: pump.fun creator fees, RWA price feeds, merkle dividend settlement.",
+  "scripts": {
+    "worker": "node src/index.ts",
+    "test": "node --test test.ts",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.30.1",
+    "@noble/hashes": "^1.4.0",
+    "@solana/spl-token": "^0.4.8",
+    "@solana/web3.js": "^1.95.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.0"
+  }
+}

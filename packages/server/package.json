@@ -1,0 +1,20 @@
+{
+  "name": "@econ-sim/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Authoritative Economy Sim tick server: runs the sim, persists intents/snapshots to SQLite, streams ticks over WebSocket, SIWS auth, epoch allocations.",
+  "scripts": {
+    "start": "node src/index.ts",
+    "test": "node --test test.ts"
+  },
+  "dependencies": {
+    "@econ-sim/sim": "0.1.0",
+    "bs58": "^6.0.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.0",
+    "@types/ws": "^8.18.0"
+  }
+}

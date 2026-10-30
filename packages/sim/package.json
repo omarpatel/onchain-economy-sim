@@ -1,0 +1,36 @@
+{
+  "name": "@econ-sim/sim",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Authoritative off-chain economic simulation core for Economy Sim.",
+  "exports": {
+    "./engine": "./src/engine.ts",
+    "./snapshot": "./src/snapshot.ts",
+    "./protocol": "./src/protocol.ts",
+    "./intents": "./src/intents.ts",
+    "./ops": "./src/ops.ts",
+    "./metrics": "./src/metrics.ts",
+    "./history": "./src/history.ts",
+    "./goods": "./src/goods.ts",
+    "./map": "./src/map.ts",
+    "./types": "./src/types.ts",
+    "./logistics": "./src/logistics.ts",
+    "./bank": "./src/bank.ts",
+    "./chain": "./src/chain.ts",
+    "./rwa": "./src/rwa.ts",
+    "./rng": "./src/rng.ts",
+    "./ledger": "./src/ledger.ts",
+    "./market": "./src/market.ts",
+    "./units": "./src/units.ts",
+    "./config": "./src/config.ts",
+    "./company": "./src/company.ts",
+    "./exchange": "./src/exchange.ts",
+    "./text": "./src/text.ts"
+  },
+  "scripts": {
+    "sim": "node sim.ts",
+    "test": "node test.ts",
+    "typecheck": "tsc -p . --noEmit"
+  }
+}
